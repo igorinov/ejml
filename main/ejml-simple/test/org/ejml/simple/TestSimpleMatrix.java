@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009-2020, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2020, Peter Abeles. All Rights Reserved.
  *
  * This file is part of Efficient Java Matrix Library (EJML).
  *
@@ -901,7 +901,7 @@ public class TestSimpleMatrix {
         DMatrixRMaj template = RandomMatrices_DDRM.rectangle(2, 3, rand);
 
         for (Matrix m : matrixTypes) {
-            m.set(ConvertMatrixType.convert(template, m.getType()));
+            m.setTo(ConvertMatrixType.convert(template, m.getType()));
 
             SimpleMatrix A = new SimpleMatrix(m);
             try {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009-2020, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2020, Peter Abeles. All Rights Reserved.
  *
  * This file is part of Efficient Java Matrix Library (EJML).
  *
@@ -18,8 +18,9 @@
 
 package org.ejml.data;
 
-import javax.annotation.Generated;
 import org.ejml.ops.MatrixIO;
+
+import javax.annotation.Generated;
 
 /**
  * Fixed sized 6 by DMatrix6x6 matrix.  The matrix is stored as class variables for very fast read/write.  aXY is the
@@ -290,7 +291,7 @@ public class DMatrix6x6 implements DMatrixFixed {
     }
 
     @Override
-    public void set(Matrix original) {
+    public void setTo( Matrix original) {
         if( original.getNumCols() != 6 || original.getNumRows() != 6 )
             throw new IllegalArgumentException("Rows and/or columns do not match");
         DMatrix m = (DMatrix)original;

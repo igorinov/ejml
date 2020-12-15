@@ -476,7 +476,7 @@ public abstract class SimpleBase<T extends SimpleBase<T>> implements Serializabl
      */
     public void set( T a ) {
         if (a.getType() == getType())
-            mat.set(a.getMatrix());
+            mat.setTo(a.getMatrix());
         else {
             setMatrix(a.mat.copy());
         }
@@ -740,7 +740,7 @@ public abstract class SimpleBase<T extends SimpleBase<T>> implements Serializabl
      */
     public T copy() {
         T ret = createLike();
-        ret.getMatrix().set(this.getMatrix());
+        ret.getMatrix().setTo(this.getMatrix());
         return ret;
     }
 
