@@ -474,7 +474,7 @@ public abstract class SimpleBase<T extends SimpleBase<T>> implements Serializabl
      *
      * @param a The matrix whose value this matrix is being set to.
      */
-    public void set( T a ) {
+    public void setTo( T a ) {
         if (a.getType() == getType())
             mat.setTo(a.getMatrix());
         else {
